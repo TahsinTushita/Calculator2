@@ -4,26 +4,26 @@ using System.Text;
 
 namespace Calculator2
 {
-    class User
+    class CalculatorFactory<T> : IFactory<T>
     {
-        public IOperations chooseOperation(string choice)
+        public IOperations<T> getOperation(string choice)
         {
             switch(choice)
             {
                 case "+":
-                    return new Addition();
+                    return new Addition<T>();
                     break;
 
                 case "-":
-                    return new Subtraction();
+                    return new Subtraction<T>();
                     break;
 
                 case "*":
-                    return new Multiplication();
+                    return new Multiplication<T>();
                     break;
 
                 case "/":
-                    return new Division();
+                    return new Division<T>();
                     break;
 
                 default:

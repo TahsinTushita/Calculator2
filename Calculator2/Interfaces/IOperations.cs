@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Calculator2
 {
-    interface IOperations
+    interface IOperations<T>
     {
-        public double calculate(double a, double b);
+        public T calculate(T a, T b);
     }
 }
