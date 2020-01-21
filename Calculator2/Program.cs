@@ -6,7 +6,10 @@ namespace Calculator2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            User user = new User();
+
+            IOperations operation = user.chooseOperation("+");
+            Console.WriteLine(operation.calculate(2, 3));
         }
     }
 }
