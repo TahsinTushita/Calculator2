@@ -1,5 +1,4 @@
 ﻿
-using Calculator2.Interfaces;
 
 namespace Calculator2
 {

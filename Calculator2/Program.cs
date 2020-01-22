@@ -25,7 +25,7 @@ namespace Calculator2
             IOperations<VectorNumber> operation2 = vectorNum.getOperation("*");
             VectorNumber vnum = new VectorNumber();
             vnum = operation2.calculate(new VectorNumber(-2, 1, 4),
-                new VectorNumber(4, 2, 1));
+                new VectorNumber(6, 2, 1));
             Console.WriteLine("result = {0}i+({1})j+({2})k", vnum.u, vnum.v, vnum.w);
         }
     }

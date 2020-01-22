@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace Calculator2
 {
-    class CalculatorFactory<T> : IFactory<T>
+    class CalculatorFactory<T> : IFactory<T> where T: ITypes
     {
         public IOperations<T> getOperation(string choice)
         {

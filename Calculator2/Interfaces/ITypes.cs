@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Calculator2.Interfaces
+namespace Calculator2
 {
     public interface ITypes
     {

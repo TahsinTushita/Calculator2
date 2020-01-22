@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator2
 {
-    class Subtraction<T> : IOperations<T>
+    class Subtraction<T> : IOperations<T> where T : ITypes
     {
         public T calculate(T a, T b)
         {
