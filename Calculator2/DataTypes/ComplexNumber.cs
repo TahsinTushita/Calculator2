@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Calculator2.Interfaces;
 
 namespace Calculator2
 {
-    struct ComplexNumber
+    public struct ComplexNumber : ITypes
     {
-        public double realNum, imgNum;
+        public double realNum { get; private set; }
+        public double imgNum { get; private set; }
 
         public ComplexNumber(double realNum,double imgNum)
         {

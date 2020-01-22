@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Calculator2.Interfaces;
 
 namespace Calculator2
 {
-    struct RealNumber
+    public struct RealNumber : ITypes
     {
-        public double num;
+        public double num { get; private set; }
 
         public RealNumber(double num)
         {

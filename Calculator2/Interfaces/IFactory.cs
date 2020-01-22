@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using Calculator2.Interfaces;
 namespace Calculator2
 {
-    interface IFactory<T>
+    interface IFactory<T> where T: ITypes
     {
         IOperations<T> getOperation(string operation);
     }

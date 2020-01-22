@@ -17,18 +17,16 @@ namespace Calculator2
             ComplexNumber complexNumber = new ComplexNumber();
             complexNumber = operation1.calculate(
                 new ComplexNumber(2, 3), new ComplexNumber(4, 5));
-            Console.WriteLine("result = {0}+{1}i",complexNumber.realNum,
+            Console.WriteLine("result = {0}+({1})i",complexNumber.realNum,
                 complexNumber.imgNum);
 
             CalculatorFactory<VectorNumber> vectorNum = new 
                 CalculatorFactory<VectorNumber>();
-            IOperations<VectorNumber> operation2 = vectorNum.getOperation("-");
-            VectorNumber vectorNumber = new VectorNumber();
-            vectorNumber = operation2.calculate(new VectorNumber(2, 3, 4),
-                new VectorNumber(-2, 3,-4));
-
-            Console.WriteLine("result = {0}i+{1}j+{2}k", vectorNumber.u,
-                vectorNumber.v,vectorNumber.w);
+            IOperations<VectorNumber> operation2 = vectorNum.getOperation("*");
+            VectorNumber vnum = new VectorNumber();
+            vnum = operation2.calculate(new VectorNumber(-2, 1, 4),
+                new VectorNumber(4, 2, 1));
+            Console.WriteLine("result = {0}i+({1})j+({2})k", vnum.u, vnum.v, vnum.w);
         }
     }
 }
