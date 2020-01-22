@@ -14,19 +14,18 @@ namespace Calculator2
             CalculatorFactory<ComplexNumber> compNum = new CalculatorFactory<ComplexNumber>
                 ();
             IOperations<ComplexNumber> operation1 = compNum.getOperation("+");
-            Console.Write(operation1.calculate(
-                new ComplexNumber(2,3),new ComplexNumber(4,5)).realNum + "+");
-            Console.Write(operation1.calculate(
-                new ComplexNumber(2, 3), new ComplexNumber(4, 5)).imgNum + "i\n");
+            ComplexNumber cnum = new ComplexNumber();
+            cnum = operation1.calculate(
+                new ComplexNumber(2, 3), new ComplexNumber(4, 5));
+            Console.WriteLine("result = {0}+{1}i",cnum.realNum,cnum.imgNum);
 
             CalculatorFactory<VectorNumber> vectorNum = new CalculatorFactory<VectorNumber>();
             IOperations<VectorNumber> operation2 = vectorNum.getOperation("+");
-            Console.Write(operation2.calculate(new VectorNumber(2, 3, 4),
-                new VectorNumber(2, 3, 4)).u + "i+");
-            Console.Write(operation2.calculate(new VectorNumber(2, 3, 4),
-                new VectorNumber(2, 3, 4)).v + "j+");
-            Console.Write(operation2.calculate(new VectorNumber(2, 3, 4),
-                new VectorNumber(2, 3, 4)).w + "k");
+            VectorNumber number = new VectorNumber();
+            number = operation2.calculate(new VectorNumber(2, 3, 4),
+                new VectorNumber(2, 3, 4));
+
+            Console.WriteLine("result = {0}i+{1}j+{2}k", number.u,number.v,number.w);
         }
     }
 }
